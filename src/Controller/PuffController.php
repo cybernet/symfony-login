@@ -1,26 +1,19 @@
 <?php
-/**
- * Created by cybernet
- * Date: 7/6/2018
- * Time: 9:48 AM
- * xDNS.ro & PoSTLiST.ro & SAiLoRPub.co.uk & Sailor.pub
- * puff
- */
 
 namespace App\Controller;
 
-
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class PuffController extends AbstractController
+class PuffController extends Controller
 {
     /**
-     * @Route("/", name="home")
-     * https://getbootstrap.com/docs/4.1/components/card/
+     * @Route("/", name="puff")
      */
-    public function Home()
+    public function index()
     {
-        return $this->render('home.html.twig');
+        return $this->render('puff/index.html.twig', [
+            'controller_name' => 'PuffController',
+        ]);
     }
 }
